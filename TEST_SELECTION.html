@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regression Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        select {
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding: 5px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .mltype {
+            margin-bottom: 10px;
+        }
+
+        .algorithm {
+            margin-left: 10px;
+            font-size: 16px;
+            padding: 4px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .highlight {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Select Regression Type</h2>
+    <select id="regressionSelector">
+        <option value="">-- Choose Regression Type --</option>
+        <option value="simple">Simple Regression</option>
+        <option value="complex">Complex Regression</option>
+    </select>
+
+    <div id="mn2">
+        <!-- Cards copied from your original code -->
+        <div class="card">
+            <h3 class="mltype">Supervised Learning</h3>
+            <p class="algorithm"><span class="bul">&#10596;</span>Linear Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Riedefefdge Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Lasso Regression</p>
+        </div>
+        <div class="card">
+            <h3 class="mltype">Unsupervised Learning</h3>
+            <p class="algorithm"><span class="bul">&#10596;</span>Linear Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Ridge Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Lasso Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Linear Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Ridge Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Lasso Regression</p>
+        </div>
+        <div class="card">
+            <h3 class="mltype">Semi-Supervised Learning</h3>
+            <p class="algorithm"><span class="bul">&#10596;</span>Linear Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Ridge Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Lasso Regression</p>
+        </div>
+        <div class="card">
+            <h3 class="mltype">Reinforcement Learning</h3>
+            <p class="algorithm"><span class="bul">&#10596;</span>Linear Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Ridge Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Lasso Regression</p>
+        </div>
+        <div class="card">
+            <h3 class="mltype">Ensemble Learning</h3>
+            <p class="algorithm"><span class="bul">&#10596;</span>Linear Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Ridge Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Lasso Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Linear Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Ridge Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Lasso Regression</p>
+        </div>
+        <div class="card">
+            <h3 class="mltype">Meta-Learning / AutoML</h3>
+            <p class="algorithm"><span class="bul">&#10596;</span>Linear Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Ridge Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Lasso Regression</p>
+        </div>
+        <div class="card">
+            <h3 class="mltype">Federated Learning</h3>
+            <p class="algorithm"><span class="bul">&#10596;</span>Linear Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Ridge Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Lasso Regression</p>
+        </div>
+        <div class="card">
+            <h3 class="mltype">Deep Learning / NLP</h3>
+            <p class="algorithm"><span class="bul">&#10596;</span>Linear Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Ridge Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Lasso Regression</p>
+        </div>
+        <div class="card">
+            <h3 class="mltype">Deep Learning / Computer Vision</h3>
+            <p class="algorithm"><span class="bul">&#10596;</span>Linear Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Ridge Regression</p>
+            <p class="algorithm"><span class="bul">&#10596;</span>Lasso Regression</p>
+        </div>
+    </div>
+
+    <script>
+        const dropdown = document.getElementById('regressionSelector');
+        const algorithmElements = document.querySelectorAll('.algorithm');
+
+        dropdown.addEventListener('change', () => {
+            const selectedType = dropdown.value;
+
+            algorithmElements.forEach(el => {
+                const text = el.textContent.toLowerCase();
+                el.classList.remove('highlight');
+
+                if (selectedType === 'simple' && text.includes('linear regression')) {
+                    el.classList.add('highlight');
+                } else if (
+                    selectedType === 'complex' &&
+                    (text.includes('ridge regression') || text.includes('lasso regression'))
+                ) {
+                    el.classList.add('highlight');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

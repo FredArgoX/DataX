@@ -1,0 +1,20 @@
+.social-container{
+    display: flex;
+    flex-direction: row;
+    gap: var(--common-gap);
+}
+.social-icon{
+    /*background-color: var(--color-a);*/
+    color: var(--color-b);
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+}
+.social-icon:hover,
+.social-icon:focus{
+    /*
+    background-color: var(--color-b);
+    color: var(--color-a);
+    */
+    color: var(--color-f);
+}

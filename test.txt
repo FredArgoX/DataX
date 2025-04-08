@@ -1,0 +1,55 @@
+What algorithms can be used for binary and multi-class classification?
+
+What algorithms can be used with categorical features, multidimensional feature matrix, and when do the features need to be encoded?
+
+Which regression methods can work with categorical features and how, in which do eatures need to be scaled, in which the features need to be numerically encoded?
+
+In which algorithms do feature scaling need to be performed, in which not?
+
+
+
+
+
+
+
+
+
+
+
+LINEAR REGRESSION
+
+Independence of features: Multicollinearity
+
+Linearity          - How to test?
+
+Residual plot
+Normality          - How to test?
+Homoscedasticity   - How to test?
+
+MAE  - Mean Absolute Error
+MSE  - Mean Squared Error
+RMSE - Root Mean Squared Error
+R²   - Coefficient of Determination
+
+LinearRegression().score
+
+
+
+
+
+
+
+Assumptions:
+
+Linearity: Relationship between features and target is linear.
+
+Independence: Observations are independent of each other.
+
+Homoscedasticity: Constant variance of errors.
+
+No multicollinearity: Features should not be highly correlated.
+
+Normally distributed residuals.
+
+
+Feature Scaling: Not required for standard Linear Regression, but beneficial when using regularization techniques like Ridge or Lasso.

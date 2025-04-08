@@ -1,0 +1,117 @@
+#header-logo{
+    height: 60px;
+}
+.menu-icon path{
+    fill: var(--color-b);
+    stroke: var(--color-b);
+}
+/*Burger symbol*/
+.menu-toggle{
+    color: var(--color-b);
+    font-size: 3rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    height: 60px;
+}
+.menu-toggle:hover,
+#closeBtn:hover{
+    color: var(--color-f);
+}
+
+/*Elements dissapear when side menu is open*/
+#menuToggle, #header-logo, .desktop-menu, main, footer {
+    transition: opacity 0.9s ease,
+                visibility 0.9s ease;
+}
+.hidden-when-menu-open {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+/*Close button*/
+#closeBtn{
+    color: var(--color-b);
+    font-size: 3rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: fixed;
+    top: var(--general-padding);
+    right: var(--general-padding);
+    height: 60px;
+    font-weight: 700;
+}
+
+/*Side menu*/
+.side-menu {
+    position: fixed;
+    padding: var(--general-padding);
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 13, 13, 0.1);
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: column;
+    gap: calc(2*var(--common-padding));
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+}
+.side-menu.open {
+    right: 0;
+}
+/*Menu options*/
+.menuItem-side{
+    color: var(--color-b);
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: none;
+    width: 250px;
+    text-align: center;
+    padding: var(--general-padding);
+    border-radius: var(--general-border-radius);
+}
+
+/*Desktop Menu*/
+.desktop-menu {
+    display: none;
+    gap: var(--general-padding);
+}
+.menuItem-desktop{
+    color: var(--color-b);
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: none;
+    text-align: center;
+    padding: var(--general-padding);
+    border-radius: var(--general-border-radius);
+    cursor: pointer;
+}
+.menuItem-side:hover,
+.menuItem-desktop:hover{
+    color: var(--color-f);
+}
+@media(min-width: 555px) {
+    .menu-toggle {
+      display: none;
+    }
+    .desktop-menu {
+      display: flex;
+    }
+    .side-menu {
+      display: none;
+    }
+}
+
+/* KEEP THIS AT THE END OF THE FILE */
+/*This is the Home button for the desktop menu that appears at the top of the UI*/
+#smaller-effect-title{
+    font-size: 1.6rem;
+}

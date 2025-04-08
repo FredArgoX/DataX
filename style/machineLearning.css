@@ -1,0 +1,95 @@
+
+#column1,
+#column2{
+    width: 100%;   
+    display: flex;
+    flex-direction: column;
+    gap: var(--general-padding);
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ML models menu header */
+#mn1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--general-padding);
+    width: 100%;
+}
+/* ML models cards */
+
+#mn2{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--general-padding);
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    background: rgba(13, 13, 13, 0.1);
+    backdrop-filter: blur(3px);
+    border-radius: var(--general-border-radius) var(--general-border-radius) 0 0;
+    border: 2px solid var(--color-e);
+    border-block-end: none;
+}
+#mn2 .card{
+    flex: 0 0 auto; /*Prevent shrinking*/
+    padding: var(--general-padding);
+    border-radius: var(--general-border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+#mn2 .card .mltype{
+    color: var(--color-b);
+    font-weight: 600;
+}
+#mn2 .card .algorithm{
+    color: var(--color-3);
+    font-weight: 600;
+    cursor: pointer;
+}
+#mn2 .card .algorithm:hover{
+    color: var(--color-2);
+}
+.bul{
+    padding-inline-end: 1rem;
+}
+
+
+#mn3{
+    width: 100%;
+}
+
+
+
+
+/* Firefox */
+#mn2{
+    scrollbar-width: thin; 
+    scrollbar-color: var(--color-1) var(--color-e);
+}
+/* WebKit (Chrome, Safari, Edge) */
+#mn2::-webkit-scrollbar {
+    width: 8px;  /* vertical */
+    height: 8px; /* horizontal */
+}
+#mn2::-webkit-scrollbar-track {
+    background: var(--color-e);
+}
+#mn2::-webkit-scrollbar-thumb {
+    background-color: var(--color-1);
+    border-radius: 4px;
+    border: 2px solid var(--color-e); /* optional padding effect */
+}
+#mn2::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-1); /* optional hover effect */
+}

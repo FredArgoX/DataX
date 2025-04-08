@@ -1,0 +1,92 @@
+#purposeSelector{
+    display: none;
+}
+.selector1,
+.selected{
+    width: 100%;
+    font-size: 1.6rem;
+    text-align: center;
+}
+.custom-select-wrapper {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+.custom-select {
+    background: rgba(13, 13, 13, 0.1);
+    backdrop-filter: blur(3px);
+    border: 2px solid var(--color-e);
+    border-radius: var(--general-border-radius);
+    cursor: pointer;
+    padding: var(--general-padding);
+    font-size: 1.6rem;
+    font-weight: 600;
+    /*box-shadow: 0 2px 5px rgba(173, 0, 0, 0.9);*/
+    /*transition: border 0.3s ease;*/
+    width: 100%;
+}
+/*
+.custom-select:hover {
+    border-color: var(--color-3);
+}
+*/
+.selected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.options-container {
+    position: absolute;
+    
+    /*width: 100%;*/
+    background-color: var(--color-1);
+    border: 2px solid var(--color-e);
+    border-inline-end: none;
+    /*border-top: none;*/
+    border-radius: 0 0 0 var(--general-border-radius);
+    max-height: 312px;
+    overflow-y: auto;
+    display: none;
+    z-index: 4;
+    top: 100%;
+    left: -2px;
+    right: -2px;
+  }
+
+.option {
+    padding: var(--general-padding);
+    transition: background 0.2s ease;
+    cursor: pointer;
+    color: var(--color-3);
+}
+.option:hover {
+    color: var(--color-2);
+}
+
+
+
+
+
+
+/* Firefox */
+.options-container{
+    scrollbar-width: thin; 
+    scrollbar-color: var(--color-1) var(--color-e);
+}
+/* WebKit (Chrome, Safari, Edge) */
+.options-container::-webkit-scrollbar {
+    width: 8px;  /* vertical */
+    height: 8px; /* horizontal */
+}
+.options-container::-webkit-scrollbar-track {
+    background: var(--color-e);
+}
+.options-container::-webkit-scrollbar-thumb {
+    background-color: var(--color-1);
+    border-radius: 4px;
+    border: 2px solid var(--color-e); /* optional padding effect */
+}
+.options-container::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-1); /* optional hover effect */
+}

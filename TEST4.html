@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World-Class ML Concept Map</title>
+  <style>
+    :root {
+      --primary-bg: #0e0e0e;
+      --accent-color: #00bcd4;
+      --default-node-color: #444;
+      --highlight-color: #ff4081;
+      --text-color: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--primary-bg);
+      color: var(--text-color);
+    }
+
+    header {
+      padding: 1rem 2rem;
+      background-color: #1f1f1f;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    select {
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: white;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .map-wrapper {
+      overflow: auto;
+      max-width: 100%;
+      border: 2px solid #333;
+      border-radius: 12px;
+      padding: 1rem;
+      background-color: #111;
+    }
+
+    svg {
+      min-width: 1800px;
+      height: auto;
+    }
+
+    .node rect {
+      transition: fill 0.3s, transform 0.3s;
+    }
+
+    .node:hover rect {
+      fill: var(--accent-color);
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    text {
+      font-size: 14px;
+      fill: var(--text-color);
+      pointer-events: none;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+
+    path {
+      stroke: #aaa;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
+    .content h2 {
+      color: var(--accent-color);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <label for="focus">Focus on:</label>
+    <select id="focus" onchange="highlightFocus()">
+      <option value="none">-- Select --</option>
+      <option value="supervised">Supervised Learning</option>
+      <option value="unsupervised">Unsupervised Learning</option>
+      <option value="semi">Semi-Supervised Learning</option>
+      <option value="reinforcement">Reinforcement Learning</option>
+      <option value="deep">Deep Learning</option>
+      <option value="ensemble">Ensemble Learning</option>
+      <option value="meta">Meta-Learning / AutoML</option>
+      <option value="federated">Federated Learning</option>
+      <option value="nlp">Deep Learning / NLP</option>
+      <option value="vision">Deep Learning / Computer Vision</option>
+    </select>
+  </header>
+
+  <main>
+    <div class="map-wrapper" id="mapWrapper">
+      <svg viewBox="0 0 2000 2000">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#aaa" />
+          </marker>
+        </defs>
+
+        <g id="ml" class="node" transform="translate(900, 100)">
+          <rect width="200" height="60" rx="15" x="-100" y="-30" fill="#666"></rect>
+          <text x="0" y="0">Machine Learning</text>
+        </g>
+
+        <!-- Main Branches -->
+        <g id="supervised" class="node" transform="translate(200, 300)">
+          <rect width="200" height="60" rx="15" x="-100" y="-30" fill="var(--default-node-color)"></rect>
+          <text x="0" y="0">Supervised Learning</text>
+        </g>
+
+        <!-- Supervised Learning Subnodes (5 examples) -->
+        <g class="node" transform="translate(200, 380)">
+          <rect width="200" height="50" rx="12" x="-100" y="-25" fill="#333"></rect>
+          <text x="0" y="0">Linear Regression</text>
+        </g>
+        <g class="node" transform="translate(200, 460)">
+          <rect width="200" height="50" rx="12" x="-100" y="-25" fill="#333"></rect>
+          <text x="0" y="0">Logistic Regression</text>
+        </g>
+        <g class="node" transform="translate(200, 540)">
+          <rect width="200" height="50" rx="12" x="-100" y="-25" fill="#333"></rect>
+          <text x="0" y="0">Decision Trees</text>
+        </g>
+        <g class="node" transform="translate(200, 620)">
+          <rect width="200" height="50" rx="12" x="-100" y="-25" fill="#333"></rect>
+          <text x="0" y="0">Random Forest</text>
+        </g>
+        <g class="node" transform="translate(200, 700)">
+          <rect width="200" height="50" rx="12" x="-100" y="-25" fill="#333"></rect>
+          <text x="0" y="0">Support Vector Machines</text>
+        </g>
+
+        <!-- Other Main Nodes -->
+        <g id="unsupervised" class="node" transform="translate(400, 300)">
+          <rect width="200" height="60" rx="15" x="-100" y="-30" fill="var(--default-node-color)"></rect>
+          <text x="0" y="0">Unsupervised Learning</text>
+        </g>
+
+        <g id="semi" class="node" transform="translate(600, 300)">
+          <rect width="200" height="60" rx="15" x="-100" y="-30" fill="var(--default-node-color)"></rect>
+          <text x="0" y="0">Semi-Supervised Learning</text>
+        </g>
+
+        <g id="reinforcement" class="node" transform="translate(800, 300)">
+          <rect width="200" height="60" rx="15" x="-100" y="-30" fill="var(--default-node-color)"></rect>
+          <text x="0" y="0">Reinforcement Learning</text>
+        </g>
+
+        <g id="deep" class="node" transform="translate(1000, 300)">
+          <rect width="200" height="60" rx="15" x="-100" y="-30" fill="var(--default-node-color)"></rect>
+          <text x="0" y="0">Deep Learning</text>
+        </g>
+
+        <g id="ensemble" class="node" transform="translate(1200, 300)">
+          <rect width="200" height="60" rx="15" x="-100" y="-30" fill="var(--default-node-color)"></rect>
+          <text x="0" y="0">Ensemble Learning</text>
+        </g>
+
+        <g id="meta" class="node" transform="translate(1400, 300)">
+          <rect width="200" height="60" rx="15" x="-100" y="-30" fill="var(--default-node-color)"></rect>
+          <text x="0" y="0">Meta-Learning / AutoML</text>
+        </g>
+
+        <g id="federated" class="node" transform="translate(1600, 300)">
+          <rect width="200" height="60" rx="15" x="-100" y="-30" fill="var(--default-node-color)"></rect>
+          <text x="0" y="0">Federated Learning</text>
+        </g>
+
+        <!-- Deep Learning Subfields -->
+        <g id="nlp" class="node" transform="translate(1000, 500)">
+          <rect width="220" height="60" rx="15" x="-110" y="-30" fill="var(--default-node-color)"></rect>
+          <text x="0" y="0">Deep Learning / NLP</text>
+        </g>
+
+        <g id="vision" class="node" transform="translate(1300, 500)">
+          <rect width="240" height="60" rx="15" x="-120" y="-30" fill="var(--default-node-color)"></rect>
+          <text x="0" y="0">Deep Learning / Computer Vision</text>
+        </g>
+
+        <!-- Connections -->
+        <path d="M900 130 V270" marker-end="url(#arrow)" />
+        <path d="M900 130 C900 200, 200 200, 200 270" marker-end="url(#arrow)"/>
+        <path d="M900 130 C900 200, 400 200, 400 270" marker-end="url(#arrow)"/>
+        <path d="M900 130 C900 200, 600 200, 600 270" marker-end="url(#arrow)"/>
+        <path d="M900 130 C900 200, 800 200, 800 270" marker-end="url(#arrow)"/>
+        <path d="M900 130 C900 200, 1000 200, 1000 270" marker-end="url(#arrow)"/>
+        <path d="M900 130 C900 200, 1200 200, 1200 270" marker-end="url(#arrow)"/>
+        <path d="M900 130 C900 200, 1400 200, 1400 270" marker-end="url(#arrow)"/>
+        <path d="M900 130 C900 200, 1600 200, 1600 270" marker-end="url(#arrow)"/>
+
+        <path d="M1000 330 V470" marker-end="url(#arrow)"/>
+        <path d="M1000 330 C1000 400, 1300 400, 1300 470" marker-end="url(#arrow)"/>
+      </svg>
+    </div>
+
+    <section class="content">
+      <h2>About This Concept Map</h2>
+      <p>This is a modular, responsive, and fully interactive concept map designed to illustrate the core branches of Machine Learning. The structure is built using scalable vector graphics (SVG) to maintain crisp visuals and high performance across devices.</p>
+      <p>The map now includes advanced subfields like Deep Learning, AutoML, and applications like NLP and Computer Vision. You can interact with the dropdown menu above to highlight specific branches such as Supervised, Unsupervised, or Reinforcement Learning. Hovering over nodes gives visual feedback, and future versions may include clickable nodes that open detailed descriptions.</p>
+    </section>
+  </main>
+
+  <script>
+    function highlightFocus() {
+      const focus = document.getElementById('focus').value;
+      const wrapper = document.getElementById('mapWrapper');
+      const sections = ['supervised', 'unsupervised', 'semi', 'reinforcement', 'deep', 'ensemble', 'meta', 'federated', 'nlp', 'vision'];
+
+      sections.forEach(id => {
+        const node = document.getElementById(id).querySelector('rect');
+        node.setAttribute('fill', focus === id ? 'var(--highlight-color)' : 'var(--default-node-color)');
+      });
+
+      if (focus !== 'none') {
+        const element = document.getElementById(focus);
+        const svgRect = element.getBoundingClientRect();
+        const wrapperRect = wrapper.getBoundingClientRect();
+
+        const scrollLeft = wrapper.scrollLeft + (svgRect.left + svgRect.width / 2) - (wrapperRect.left + wrapperRect.width / 2);
+        wrapper.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
