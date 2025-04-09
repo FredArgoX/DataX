@@ -1,0 +1,38 @@
+/*Carousel styling*/
+.carousel{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: var(--general-padding);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.carousel::webkit-scrollbar{
+    display: none;
+}
+/*Progress bar styling*/
+.progress-bar{
+    width: 100%;
+    height: 12px;
+    background-color: var(--color-e);
+    position: relative;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+}
+.progress{
+    align-self: center;
+    height: calc(100% - 6px);
+    background-color: var(--color-4);
+    width: 0%;
+    border-radius: 2px;
+}
+
+
+
+
+
+
