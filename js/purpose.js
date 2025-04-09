@@ -80,16 +80,6 @@ document.querySelectorAll(".option").forEach(option => {
                 el.classList.add('highlight');
                 document.getElementById('imageAnalysis_Generation1stElement').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
             }
-
-            
-
         });
-        //
-
-        /*
-        if (realSelectX.value === 'regression'){
-            console.log("Regression found")
-        }
-        */
     });
 });

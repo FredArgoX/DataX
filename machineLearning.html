@@ -103,23 +103,23 @@
                 <div class="carousel" id="algorithmsCarousel">
                     <div class="card">
                         <h3 class="mltype">Supervised Learning</h3>
-                        <p class="algorithm regression" id="regression1stElement"><span class="bul">&#10596;</span>Linear Regression</p>
-                        <p class="algorithm regression"><span class="bul">&#10596;</span>Ridge Regression</p>
-                        <p class="algorithm regression"><span class="bul">&#10596;</span>Lasso Regression</p>
-                        <p class="algorithm regression"><span class="bul">&#10596;</span>Elastic Net Regression</p>
-                        <p class="algorithm regression"><span class="bul">&#10596;</span>Polynomial Regression</p>
-                        <p class="algorithm regression"><span class="bul">&#10596;</span>Support Vector Regression (SVR)</p>
-                        <p class="algorithm regression"><span class="bul">&#10596;</span>Decision Tree Regression</p>
-                        <p class="algorithm regression"><span class="bul">&#10596;</span>Random Forest Regression</p>
-                        <p class="algorithm regression"><span class="bul">&#10596;</span>Gradient Boosting Regression (XGBoost, LightGBM, CatBoost)</p>
-                        <p class="algorithm classification" id="classification1stElement"><span class="bul">&#10596;</span>Logistic Regression</p>
-                        <p class="algorithm classification"><span class="bul">&#10596;</span>K-Nearest Neighbors (K-NN)</p>
-                        <p class="algorithm classification"><span class="bul">&#10596;</span>Decision Tree Classification</p>
-                        <p class="algorithm classification"><span class="bul">&#10596;</span>Random Forest Classification</p>
-                        <p class="algorithm classification"><span class="bul">&#10596;</span>Support Vector Machine (SVM)</p>
-                        <p class="algorithm classification"><span class="bul">&#10596;</span>Naïve Bayes (Gaussian, Multinomial, Bernoulli)</p>
-                        <p class="algorithm classification"><span class="bul">&#10596;</span>Gradient Boosting Classification (XGBoost, LightGBM, CatBoost)</p>
-                        <p class="algorithm classification"><span class="bul">&#10596;</span>Artificial Neural Networks (ANN)</p>
+                        <p id="001" class="algorithm regression" id="regression1stElement"><span class="bul">&#10596;</span>Linear Regression</p>
+                        <p id="002" class="algorithm regression"><span class="bul">&#10596;</span>Ridge Regression</p>
+                        <p id="003" class="algorithm regression"><span class="bul">&#10596;</span>Lasso Regression</p>
+                        <p id="004" class="algorithm regression"><span class="bul">&#10596;</span>Elastic Net Regression</p>
+                        <p id="005" class="algorithm regression"><span class="bul">&#10596;</span>Polynomial Regression</p>
+                        <p id="006" class="algorithm regression"><span class="bul">&#10596;</span>Support Vector Regression (SVR)</p>
+                        <p id="007" class="algorithm regression"><span class="bul">&#10596;</span>Decision Tree Regression</p>
+                        <p id="008" class="algorithm regression"><span class="bul">&#10596;</span>Random Forest Regression</p>
+                        <p id="009" class="algorithm regression"><span class="bul">&#10596;</span>Gradient Boosting Regression (XGBoost, LightGBM, CatBoost)</p>
+                        <p id="010" class="algorithm classification" id="classification1stElement"><span class="bul">&#10596;</span>Logistic Regression</p>
+                        <p id="011" class="algorithm classification"><span class="bul">&#10596;</span>K-Nearest Neighbors (K-NN)</p>
+                        <p id="012" class="algorithm classification"><span class="bul">&#10596;</span>Decision Tree Classification</p>
+                        <p id="013" class="algorithm classification"><span class="bul">&#10596;</span>Random Forest Classification</p>
+                        <p id="014" class="algorithm classification"><span class="bul">&#10596;</span>Support Vector Machine (SVM)</p>
+                        <p id="015" class="algorithm classification"><span class="bul">&#10596;</span>Naïve Bayes (Gaussian, Multinomial, Bernoulli)</p>
+                        <p id="015" class="algorithm classification"><span class="bul">&#10596;</span>Gradient Boosting Classification (XGBoost, LightGBM, CatBoost)</p>
+                        <p id="016" class="algorithm classification"><span class="bul">&#10596;</span>Artificial Neural Networks (ANN)</p>
                     </div>
                     <div class="card">
                         <h3 class="mltype">Unsupervised Learning</h3>
@@ -226,25 +226,8 @@
         <div id="column2">
             <div id="mn3">
                 <div class="code-container">
-                    <h1 class="code-title">Naïve Bayes <span class="blue">(</span>NB<span class="blue">)</span></h1>
-                    <p class="ml-type-1">Supervised Learning</p>
-                    <p class="ml-type-2">Classification</p>
-                    <p class="code-concept">Naïve Bayes is a probabilistic classification algorithm based on Bayes' Theorem. It calculates the posterior probability of a class given the observed features and classifies data points by choosing the class with the highest probability.</p>
-                    <p class="code-concept">It assumes that the features in the dataset are independent of each other (this is the "naïve" assumption). It also assumes that all features contribute equally to the outcome.</p>
-                    <p class="code-concept">Unlike many machine learning algorithms (such as K-Nearest Neighbors, Logistic Regression, or Support Vector Machines), <span class="blue">Naïve Bayes does not require feature scaling</span> because it is based on probability calculations from the data's distribution rather than distance-based metrics.</p>
-                    <p class="code-concept">If using <span class="blue">GaussianNB</span>, categorical variables need to be converted to numerical form (encoding like one-hot encoding or label encoding) and standardization may improve numerical stability if feature magnitudes vary significantly, but other NB methods can directly work with categorical data, <span class="blue">CategoricalNB</span> (best for categorical features), <span class="blue">BernoulliNB</span> (for binary categorical features), <span class="blue">MultinomialNB</span> (for count-based categorical data).</p>
-                    <div class="just-code">
-                        <!--///////////////////-->
-                        <button class="copy-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                            </svg>
-                        </button>
-                        <!--///////////////////-->
-                        <pre><code class="language-python" id="naiveBayes-code"></code></pre>
-                    </div>
-                    <h1 class="code-example" id="project-naiveBayes">View Example Project</h1>
+                    <!--Dynamic content here-->
+                    <!--Example: ./algorithms/linearRegression.html content or ./algorithms/naiveBayes.html content-->
                 </div>
             </div>
         </div>
@@ -259,6 +242,7 @@
     </footer>
     <!-- /////////////////////////////////////////////////////// -->
     <!--<script src="./js/app.js"></script>-->
+    <script src="./js/algorithmRender.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="./js/particles.js"></script>
     <script src="./js/menu.js"></script>

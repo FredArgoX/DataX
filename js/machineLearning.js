@@ -2,6 +2,7 @@
 // MACHINE LEARNING INTERACTIVITY
 
 // COPY CODE BUTTON
+/*
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".copy-btn").forEach(button => {
         button.addEventListener("click", () => copyCode(button));
@@ -16,8 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }).catch(err => console.error("Error copying text: ", err));
     }
 });
-
+*/
 /* /////////////////////////////////////////////////////// */
+/*
 
 // KNN
 document.addEventListener("DOMContentLoaded", function() {
@@ -106,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.error("Error loading the Linear Regression code:", error));
 });
-
+*/
 /* /////////////////////////////////////////////////////// */
 
 // PROJECTS LINKS TO EXEMPLIFY EACH ML ALGORITHM
@@ -126,3 +128,38 @@ document.addEventListener("DOMContentLoaded", function() {
 //
 //
 //
+
+
+
+
+/*
+
+const btns = document.querySelectorAll(".copy-btn");
+btns.forEach(button => {
+    button.addEventListener("click", () => copyCode(button));
+});
+function copyCode(button) {
+    const codeBlock = button.nextElementSibling.querySelector("code");
+    if (!codeBlock) return;
+    const textToCopy = codeBlock.innerText || codeBlock.textContent;
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        button.classList.add("copied");
+        setTimeout(() => button.classList.remove("copied"), 1500);
+    }).catch(err => console.error("Error copying text: ", err));
+}
+    */
+
+
+
+
+
+
+
+
+
+document.querySelectorAll(".copy-btn").forEach(button => {
+    button.addEventListener("click", () => copyCode(button));
+});
+function copyCode(button) {
+    console.log("Clicked btn");
+}
