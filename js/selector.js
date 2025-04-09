@@ -14,6 +14,7 @@ Array.from(realSelect.options).forEach(opt => {
 
 // Toggle dropdown
 selectedDisplay.addEventListener("click", () => {
+  //console.log("Click on algorithm selection")
   optionsContainer.style.display =
     optionsContainer.style.display === "block" ? "none" : "block";
 });
@@ -23,6 +24,17 @@ document.querySelectorAll(".option").forEach(option => {
   option.addEventListener("click", () => {
     selectedDisplay.textContent = option.textContent;
     realSelect.value = option.getAttribute("data-value");
+    //
+    /*
+    console.log(realSelect.value);
+    */
+    //
+    /*
+    if (realSelect.value === 'regression'){
+      console.log("Regression found")
+    }
+    */
+    //
     optionsContainer.style.display = "none";
   });
 });

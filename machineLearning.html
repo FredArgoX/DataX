@@ -41,6 +41,8 @@
     <link rel="stylesheet" href="./style/selector.css">
     <!--Carousel style-->
     <link rel="stylesheet" href="./style/carousel.css">
+    <!--Purpose of ML algorithm style-->
+    <link rel="stylesheet" href="./style/purpose.css">
 </head>
 <body>
     <!-- /////////////////////////////////////////////////////// -->
@@ -101,117 +103,119 @@
                 <div class="carousel" id="algorithmsCarousel">
                     <div class="card">
                         <h3 class="mltype">Supervised Learning</h3>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Linear Regression</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Ridge Regression</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Lasso Regression</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Elastic Net Regression</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Polynomial Regression</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Support Vector Regression (SVR)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Decision Tree Regression</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Random Forest Regression</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Gradient Boosting Regression (XGBoost, LightGBM, CatBoost)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Logistic Regression</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>K-Nearest Neighbors (K-NN)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Decision Tree Classification</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Random Forest Classification</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Support Vector Machine (SVM)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Naïve Bayes (Gaussian, Multinomial, Bernoulli)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Gradient Boosting Classification (XGBoost, LightGBM, CatBoost)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Artificial Neural Networks (ANN)</p>
+                        <p class="algorithm regression" id="regression1stElement"><span class="bul">&#10596;</span>Linear Regression</p>
+                        <p class="algorithm regression"><span class="bul">&#10596;</span>Ridge Regression</p>
+                        <p class="algorithm regression"><span class="bul">&#10596;</span>Lasso Regression</p>
+                        <p class="algorithm regression"><span class="bul">&#10596;</span>Elastic Net Regression</p>
+                        <p class="algorithm regression"><span class="bul">&#10596;</span>Polynomial Regression</p>
+                        <p class="algorithm regression"><span class="bul">&#10596;</span>Support Vector Regression (SVR)</p>
+                        <p class="algorithm regression"><span class="bul">&#10596;</span>Decision Tree Regression</p>
+                        <p class="algorithm regression"><span class="bul">&#10596;</span>Random Forest Regression</p>
+                        <p class="algorithm regression"><span class="bul">&#10596;</span>Gradient Boosting Regression (XGBoost, LightGBM, CatBoost)</p>
+                        <p class="algorithm classification" id="classification1stElement"><span class="bul">&#10596;</span>Logistic Regression</p>
+                        <p class="algorithm classification"><span class="bul">&#10596;</span>K-Nearest Neighbors (K-NN)</p>
+                        <p class="algorithm classification"><span class="bul">&#10596;</span>Decision Tree Classification</p>
+                        <p class="algorithm classification"><span class="bul">&#10596;</span>Random Forest Classification</p>
+                        <p class="algorithm classification"><span class="bul">&#10596;</span>Support Vector Machine (SVM)</p>
+                        <p class="algorithm classification"><span class="bul">&#10596;</span>Naïve Bayes (Gaussian, Multinomial, Bernoulli)</p>
+                        <p class="algorithm classification"><span class="bul">&#10596;</span>Gradient Boosting Classification (XGBoost, LightGBM, CatBoost)</p>
+                        <p class="algorithm classification"><span class="bul">&#10596;</span>Artificial Neural Networks (ANN)</p>
                     </div>
                     <div class="card">
                         <h3 class="mltype">Unsupervised Learning</h3>
-                        <p class="algorithm"><span class="bul">&#10596;</span>K-Means</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Hierarchical Clustering</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>DBSCAN (Density-Based Spatial Clustering)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Gaussian Mixture Models (GMM)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Mean Shift Clustering</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Principal Component Analysis (PCA)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>t-SNE</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>UMAP</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Single Value Decomposition (SVD)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Independent Component Analysis (ICA)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Autoencoders</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Isolation Forest</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>One-Class SVM</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Local Outlier Factor (LOF)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Autoencoders for Anomaly Detection</p>
+                        <p class="algorithm clustering" id="clustering1stElement"><span class="bul">&#10596;</span>K-Means</p>
+                        <p class="algorithm clustering"><span class="bul">&#10596;</span>Hierarchical Clustering</p>
+                        <p class="algorithm clustering"><span class="bul">&#10596;</span>DBSCAN (Density-Based Spatial Clustering)</p>
+                        <p class="algorithm clustering"><span class="bul">&#10596;</span>Gaussian Mixture Models (GMM)</p>
+                        <p class="algorithm clustering"><span class="bul">&#10596;</span>Mean Shift Clustering</p>
+                        <p class="algorithm dimensionalityReduction" id="dimensionalityReduction1stElement"><span class="bul">&#10596;</span>Principal Component Analysis (PCA)</p>
+                        <p class="algorithm dimensionalityReduction"><span class="bul">&#10596;</span>t-SNE</p>
+                        <p class="algorithm dimensionalityReduction"><span class="bul">&#10596;</span>UMAP</p>
+                        <p class="algorithm dimensionalityReduction"><span class="bul">&#10596;</span>Single Value Decomposition (SVD)</p>
+                        <p class="algorithm dimensionalityReduction"><span class="bul">&#10596;</span>Independent Component Analysis (ICA)</p>
+                        <p class="algorithm dimensionalityReduction"><span class="bul">&#10596;</span>Autoencoders</p>
+                        <p class="algorithm anomalyDetection" id="anomalyDetection1stElement"><span class="bul">&#10596;</span>Isolation Forest</p>
+                        <p class="algorithm anomalyDetection"><span class="bul">&#10596;</span>One-Class SVM</p>
+                        <p class="algorithm anomalyDetection"><span class="bul">&#10596;</span>Local Outlier Factor (LOF)</p>
+                        <p class="algorithm anomalyDetection"><span class="bul">&#10596;</span>Autoencoders for Anomaly Detection</p>
                     </div>
                     <div class="card">
                         <h3 class="mltype">Semi-Supervised Learning</h3>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Self-training</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Co-training</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Pseudo-labeling</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Graph-based semi-supervised learning</p>
+                        <p class="algorithm classification_Clustering" id="classification_Clustering1stElement"><span class="bul">&#10596;</span>Self-training</p>
+                        <p class="algorithm classification_Clustering"><span class="bul">&#10596;</span>Co-training</p>
+                        <p class="algorithm classification_Clustering"><span class="bul">&#10596;</span>Pseudo-labeling</p>
+                        <p class="algorithm classification_Clustering"><span class="bul">&#10596;</span>Graph-based semi-supervised learning</p>
                     </div>
                     <div class="card">
                         <h3 class="mltype">Reinforcement Learning</h3>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Q-Learning</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Deep Q Networks (DQN)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Policy Gradient Methods</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Actor-Citric Methods (A3C, A2C, PPO)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Deep Deterministic Policy Gradient (DDPG)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Trust Region Policy Optimization (TRPO)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Monte Carlo Methods</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Milti-Agent Reinforcement Learning</p>
+                        <p class="algorithm policyLearning_DecisionMaking" id="policyLearning_DecisionMaking1stElement"><span class="bul">&#10596;</span>Q-Learning</p>
+                        <p class="algorithm policyLearning_DecisionMaking"><span class="bul">&#10596;</span>Deep Q Networks (DQN)</p>
+                        <p class="algorithm policyLearning_DecisionMaking"><span class="bul">&#10596;</span>Policy Gradient Methods</p>
+                        <p class="algorithm policyLearning_DecisionMaking"><span class="bul">&#10596;</span>Actor-Citric Methods (A3C, A2C, PPO)</p>
+                        <p class="algorithm policyLearning_DecisionMaking"><span class="bul">&#10596;</span>Deep Deterministic Policy Gradient (DDPG)</p>
+                        <p class="algorithm policyLearning_DecisionMaking"><span class="bul">&#10596;</span>Trust Region Policy Optimization (TRPO)</p>
+                        <p class="algorithm policyLearning_DecisionMaking"><span class="bul">&#10596;</span>Monte Carlo Methods</p>
+                        <p class="algorithm policyLearning_DecisionMaking"><span class="bul">&#10596;</span>Multi-Agent Reinforcement Learning</p>
                     </div>
                     <div class="card">
                         <h3 class="mltype">Deep Learning</h3>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Feedforward Neural Networks (FNN)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Convolutional Neural Networks (CNN)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Recurrent Neural Networks (RNN)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Long Short-Term Memory (LSTM)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Gated Recurrent Units (GRU)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Transformers (BERT, GPT, T5)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Variational Autoencoders (VAE)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Generative Adversarial Networks (GANs)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Diffusion Models</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Graph Neural Networks (GNN)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Graph Convolutional Networks (GCN)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Graph Attention Networks (GAT)</p>
+                        <p class="algorithm general_FeatureLearning" id="general_FeatureLearning1stElement"><span class="bul">&#10596;</span>Feedforward Neural Networks (FNN)</p>
+                        <p class="algorithm general_FeatureLearning"><span class="bul">&#10596;</span>Convolutional Neural Networks (CNN)</p>
+                        <p class="algorithm general_FeatureLearning"><span class="bul">&#10596;</span>Recurrent Neural Networks (RNN)</p>
+                        <p class="algorithm general_FeatureLearning"><span class="bul">&#10596;</span>Long Short-Term Memory (LSTM)</p>
+                        <p class="algorithm general_FeatureLearning"><span class="bul">&#10596;</span>Gated Recurrent Units (GRU)</p>
+                        <p class="algorithm general_FeatureLearning"><span class="bul">&#10596;</span>Transformers (BERT, GPT, T5)</p>
+                        <p class="algorithm generation_Reconstruction" id="generation_Reconstruction1stElement"><span class="bul">&#10596;</span>Variational Autoencoders (VAE)</p>
+                        <p class="algorithm generation_Reconstruction"><span class="bul">&#10596;</span>Generative Adversarial Networks (GANs)</p>
+                        <p class="algorithm generation_Reconstruction"><span class="bul">&#10596;</span>Diffusion Models</p>
+                        <p class="algorithm graphLearning_Representation" id="graphLearning_Representation1stElement"><span class="bul">&#10596;</span>Graph Neural Networks (GNN)</p>
+                        <p class="algorithm graphLearning_Representation"><span class="bul">&#10596;</span>Graph Convolutional Networks (GCN)</p>
+                        <p class="algorithm graphLearning_Representation"><span class="bul">&#10596;</span>Graph Attention Networks (GAT)</p>
                     </div>
                     <div class="card">
                         <h3 class="mltype">Ensemble Learning</h3>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Bagging (Random Forest, Extra Trees)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Boosting (GBM, XGBoost, LightGBM, CatBoost)</p>
+                        <p class="algorithm classification_Regression" id="classification_Regression1stElement"><span class="bul">&#10596;</span>Bagging (Random Forest, Extra Trees)</p>
+                        <p class="algorithm classification_Regression"><span class="bul">&#10596;</span>Boosting (GBM, XGBoost, LightGBM, CatBoost)</p>
+                        <p class="algorithm classification_Regression"><span class="bul">&#10596;</span>Stacking</p>
+                        <p class="algorithm classification_Regression"><span class="bul">&#10596;</span>Blending</p>
                     </div>
                     <div class="card">
                         <h3 class="mltype">Meta-Learning / AutoML</h3>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Neural Architecture Search (NAS)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Bayesian Optimization</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Hyperparameter Tuning (Grid Search, Random Search, Optuna)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>AutoML Frameworks (Google AutoML, Auto-sklearn, H2O.ai)</p>
+                        <p class="algorithm modelOptimization_Automation" id="modelOptimization_Automation1stElement"><span class="bul">&#10596;</span>Neural Architecture Search (NAS)</p>
+                        <p class="algorithm modelOptimization_Automation"><span class="bul">&#10596;</span>Bayesian Optimization</p>
+                        <p class="algorithm modelOptimization_Automation"><span class="bul">&#10596;</span>Hyperparameter Tuning (Grid Search, Random Search, Optuna)</p>
+                        <p class="algorithm modelOptimization_Automation"><span class="bul">&#10596;</span>AutoML Frameworks (Google AutoML, Auto-sklearn, H2O.ai)</p>
                     </div>
                     <div class="card">
                         <h3 class="mltype">Federated Learning</h3>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Secure Aggregation Methods</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Federated Averaging (FedAvg)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Differential Privacy Techniques</p>
+                        <p class="algorithm distributedLearning_PrivacyPreservingML" id="distributedLearning_PrivacyPreservingML1stElement"><span class="bul">&#10596;</span>Secure Aggregation Methods</p>
+                        <p class="algorithm distributedLearning_PrivacyPreservingML"><span class="bul">&#10596;</span>Federated Averaging (FedAvg)</p>
+                        <p class="algorithm distributedLearning_PrivacyPreservingML"><span class="bul">&#10596;</span>Differential Privacy Techniques</p>
                     </div>
                     <div class="card">
                         <h3 class="mltype">Time Series Forecasting (Supervised Learning)</h3>
-                        <p class="algorithm"><span class="bul">&#10596;</span>ARIMA</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>SARIMA</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Prophet</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>LSTM for Time Series</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Temporal Convolutional Networks (TCN)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Transformer-based Time Series Models</p>
+                        <p class="algorithm timeSeriesForecasting" id="timeSeriesForecasting1stElement"><span class="bul">&#10596;</span>ARIMA</p>
+                        <p class="algorithm timeSeriesForecasting"><span class="bul">&#10596;</span>SARIMA</p>
+                        <p class="algorithm timeSeriesForecasting"><span class="bul">&#10596;</span>Prophet</p>
+                        <p class="algorithm timeSeriesForecasting"><span class="bul">&#10596;</span>LSTM for Time Series</p>
+                        <p class="algorithm timeSeriesForecasting"><span class="bul">&#10596;</span>Temporal Convolutional Networks (TCN)</p>
+                        <p class="algorithm timeSeriesForecasting"><span class="bul">&#10596;</span>Transformer-based Time Series Models</p>
                     </div>
                     <div class="card">
                         <h3 class="mltype">NLP (Deep Learning)</h3>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Word Embeddings (Word2Vec, GloVe, FastText)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Transformers (BERT, GPT, T5, RoBERTa, LLaMA)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Text Classification & Sentiment Analysis</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Named Entity Recognition (NER)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Topic Modeling (LDA, NMF)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Sequence-to-Sequence Models (Seq2Seq, T5)</p>
+                        <p class="algorithm textUnderstanding_Generation" id="textUnderstanding_Generation1stElement"><span class="bul">&#10596;</span>Word Embeddings (Word2Vec, GloVe, FastText)</p>
+                        <p class="algorithm textUnderstanding_Generation"><span class="bul">&#10596;</span>Transformers (BERT, GPT, T5, RoBERTa, LLaMA)</p>
+                        <p class="algorithm textUnderstanding_Generation"><span class="bul">&#10596;</span>Text Classification & Sentiment Analysis</p>
+                        <p class="algorithm textUnderstanding_Generation"><span class="bul">&#10596;</span>Named Entity Recognition (NER)</p>
+                        <p class="algorithm textUnderstanding_Generation"><span class="bul">&#10596;</span>Topic Modeling (LDA, NMF)</p>
+                        <p class="algorithm textUnderstanding_Generation"><span class="bul">&#10596;</span>Sequence-to-Sequence Models (Seq2Seq, T5)</p>
                     </div>
                     <div class="card">
                         <h3 class="mltype">Computer Vision (Deep Learning)</h3>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Image Classification (CNNs, ResNet, EfficientNet)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Object Detection (YOLO, Faster R-CNN, RetinaNet)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Image Segmentation (U-Net, DeepLabV3)</p>
-                        <p class="algorithm"><span class="bul">&#10596;</span>Image Generation (GANs, Diffusion Models)</p>
+                        <p class="algorithm imageAnalysis_Generation" id="imageAnalysis_Generation1stElement"><span class="bul">&#10596;</span>Image Classification (CNNs, ResNet, EfficientNet)</p>
+                        <p class="algorithm imageAnalysis_Generation"><span class="bul">&#10596;</span>Object Detection (YOLO, Faster R-CNN, RetinaNet)</p>
+                        <p class="algorithm imageAnalysis_Generation"><span class="bul">&#10596;</span>Image Segmentation (U-Net, DeepLabV3)</p>
+                        <p class="algorithm imageAnalysis_Generation"><span class="bul">&#10596;</span>Image Generation (GANs, Diffusion Models)</p>
                     </div>
                 </div>
                 <div class="progress-bar">
@@ -262,6 +266,7 @@
     <script src="./js/machineLearning.js"></script>
     <script src="./js/selector.js"></script>
     <script src="./js/carousel.js"></script>
+    <script src="./js/purpose.js"></script>
     <!--<script src="./js/relevantQuestions.js"></script>-->
     <!-- /////////////////////////////////////////////////////// -->
 </body>

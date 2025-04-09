@@ -1,0 +1,6 @@
+.highlight {
+    color: var(--color-4) !important;
+}
+.highlight:hover {
+    color: var(--color-2) !important;
+}
