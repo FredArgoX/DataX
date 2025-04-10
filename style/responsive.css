@@ -1,0 +1,34 @@
+/*
+main{
+    border: 1px solid crimson;
+}
+#column1{
+    border: 1px solid chartreuse;
+    grid-area: column1;
+}
+#column2{
+    border: 1px solid chocolate;
+    grid-area: column2;
+}
+@media screen and (min-width: 1000px){
+    main{
+        display: flex;
+        flex-direction: row;
+    }
+    #column1{
+        grid-area: column1;
+        position: relative;
+        max-width: 40vw;
+        max-height: calc(100vh - (header height) - (footer height) - (2 * var(--general-padding) - 200px));
+    }
+    #column2{
+        grid-area: column2;
+    }
+    .carousel{
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+        max-height: 10vh;
+    }
+}
+*/
