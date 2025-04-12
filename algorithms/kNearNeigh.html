@@ -1,9 +1,10 @@
-
-<h1 class="code-title">k-Nearest Neighbors (k-NN)</h1>
+<h1 class="code-title">K-Nearest Neighbors <span class="blue">(</span>KNN<span class="blue">)</span></h1>
 <p class="ml-type-1">Supervised Learning</p>
 <p class="ml-type-2">Classification</p>
-<p class="code-concept">Text 1</p>
-<p class="code-concept">Text 2 <span class="blue">Text 3</span></p>
+<p class="code-concept">K-NN is a classification algorithm that assigns a label to a specific data point based on the labels of its k-nearest neighbors. Here, 'k' represents the number of neighbors considered.</p>
+<p class="code-concept">KNN is a distance-based algorithm, with "Euclidean distance" being the most commonly used. When the dataset contains features with different scales, those with larger numerical values will dominate the distance calculations. <span class="blue">Feature scaling ensures that all features contribute equally to the model.</span></p>
+<p class="code-concept"><span class="blue">Data must be scaled after splitting it into training and testing sets.</span> If scaling is done before the split, the normalization parameters (like the mean and standard deviation) are calculated from all the data, including the test set. This allows the model to indirectly gain information from the test set during training, which causes data leakage.</p>
+<p class="code-concept">Data leakage occurs when information from outside the training dataset is used to create the model. This can lead to overly optimistic results and a model that doesn’t generalize well when deployed in the real world. In the case of normalization, data leakage happens when the test set influences the training process.</p>
 <div class="just-code">
     <!--///////////////////-->
     <button class="copy-btn">

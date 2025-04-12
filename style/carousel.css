@@ -26,13 +26,7 @@
 .progress{
     align-self: center;
     height: calc(100% - 6px);
-    background-color: var(--color-4);
+    background-color: var(--color-5);
     width: 0%;
     border-radius: 2px;
 }
-
-
-
-
-
-
