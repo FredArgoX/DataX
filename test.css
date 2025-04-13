@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack header, container, and footer */
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    position: fixed; /* Make the header stick to the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100; /* Ensure it's above other elements */
+    opacity: 0.3;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1; /* Allow the container to take up remaining vertical space */
+    margin-top: 3em; /* Adjust margin to prevent overlap with the fixed header */
+}
+
+aside {
+    width: 200px; /* Adjust sidebar width as needed */
+    background-color: #f0f0f0;
+    padding: 1em;
+    overflow-y: auto; /* Enable vertical scrolling for sidebars */
+    height: calc(100vh - 3em - 50px); /* Adjust height to fit between header and footer */
+    position: sticky; /* Make sidebars stick during main content scroll */
+    top: 3em; /* Position them below the header */
+}
+
+.left-sidebar {
+    order: -1; /* Place the left sidebar before the main content */
+}
+
+main {
+    flex-grow: 1; /* Allow the main content to take up remaining horizontal space */
+    padding: 1em;
+    overflow-y: auto; /* Enable vertical scrolling for the main content */
+    margin-top: 1em; /* Add a top margin to prevent overlap with the header */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
