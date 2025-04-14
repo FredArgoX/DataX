@@ -109,8 +109,17 @@ input[type="text"]:focus{
         align-items: flex-start;
         /*margin-top: calc(60px+30px);*/
     }
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: var(--general-padding);
+    }
     #column1{
         flex: 1;
+        /*position: sticky;
+        overflow-y: auto;*/
     }
     #column2{
         flex: 2;
@@ -119,7 +128,7 @@ input[type="text"]:focus{
         max-height: 71vh;
         overflow-y: auto;
         scrollbar-width: thin;
-        scrollbar-color: var(--color-5) var(--color-1); /* thumb color, track color */
+        scrollbar-color: var(--color-5) var(--color-1); 
     }
     /* For WebKit-based browsers (Chrome, Safari, Edge) */
     #questionContainer::-webkit-scrollbar {

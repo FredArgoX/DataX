@@ -1,0 +1,36 @@
+p{
+    color: blue;
+}
+
+
+header{
+    background-color: var(--color-1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+main{
+    margin-top: 90px;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /*flex-grow: 1;*/
+    border: 1px solid crimson;
+}
+#column1{
+    flex: 1;
+    border: 1px solid chartreuse;
+    overflow-y: auto;
+    height: calc(100vh - 90px - 15px);
+    position: sticky !important;
+    top: 20vh !important;
+}
+#column2{
+    flex: 3;
+    border: 1px solid salmon;
+    overflow-y: auto;
+}
