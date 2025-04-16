@@ -31,6 +31,8 @@ df
 # These methods should be fitted only on the training set and then applied to the test set
 
 # Split the data into features (X) and target (y)
+# Option 1: X = df[feature_names_list]
+# Option 2:
 X = df.drop(columns=["target"])  # Replace "target" with the actual column name
 y = df["target"]
 
