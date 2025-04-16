@@ -54,11 +54,23 @@ y_pred = linR_model.predict(X_test)
 # --------------------------------------------------------------------------
 # MODEL EVALUATION
 
+# Calculate R-squared score (R²)
+r2 = r2_score(y_test, y_pred)
+
 # Calculate Mean Squared Error (MSE)
 mse = mean_squared_error(y_test, y_pred)
 
-# Calculate R-squared score (R²)
-r2 = r2_score(y_test, y_pred)
+# Calculate Root Mean Squared Error (RMSE)
+rmse = np.sqrt(mse)
+
+# Calculate Mean Absolute Error
+mae = mean_absolute_error(y_test, y_pred)
+
+# Print metrics
+metrics_values = [r2, mse, rmse, mae]
+metrics_names  = ["R²", "MSE", "RMSE", "MAE"]
+for name, value in zip(metrics_names, metrics_values):
+  print(f"{name:<4}: {value:>12,.10f}")
 
 # --------------------------------------------------------------------------
 # REGRESSION VISUALIZATION
