@@ -70,7 +70,7 @@ mae = mean_absolute_error(y_test, y_pred)
 metrics_values = [r2, mse, rmse, mae]
 metrics_names  = ["R²", "MSE", "RMSE", "MAE"]
 for name, value in zip(metrics_names, metrics_values):
-  print(f"{name:<4}: {value:>12,.10f}")
+    print(f"{name:<4}: {value:>12,.10f}")
 
 # --------------------------------------------------------------------------
 # REGRESSION VISUALIZATION
