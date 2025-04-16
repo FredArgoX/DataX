@@ -44,7 +44,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # --------------------------------------------------------------------------
 # MODEL TRAINING AND PREDICTION
 
-# Model training
+# Model creation and  training
 linR_model = LinearRegression()
 linR_model.fit(X_train, y_train)
 
