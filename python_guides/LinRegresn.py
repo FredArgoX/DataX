@@ -30,6 +30,16 @@ df
 # - Target Encoding | Frequency Encoding
 # These methods should be fitted only on the training set and then applied to the test set
 
+# --------------------------------------------------------------------------
+# TEST ASSUMPTIONS BEFORE REGRESSION
+# ---> Checking linearity and multicollinearity before helps to decide on "variable transformations" and "elimination of redundant predictors"
+
+# Linearity (Include Scatter Plots)
+# Multicollinearity
+
+# --------------------------------------------------------------------------
+# DATA SPLIT (X, y) & (Train, Test)
+
 # Split the data into features (X) and target (y)
 # Option 1: X = df[feature_names_list]
 # Option 2:
@@ -50,6 +60,14 @@ linR_model.fit(X_train, y_train)
 
 # Make predictions on the test set
 y_pred = linR_model.predict(X_test)
+
+# --------------------------------------------------------------------------
+# TEST ASSUMPTIONS AFTER REGRESSION
+# ---> Checking the error-related assumptions after regression, hepls to define "model validity" and "statistical inference reliability (hypothesis testing, confidence intervals)"
+
+# Independence of errors (Autocorrelation , Durbin-Watson test)
+# Homoscedasticity (Constant variance of  errors) (Include Residual plots)
+# Normality of errors (Q-Q plots, histograms of residuals, Omnibus, Jarque-Bera test)
 
 # --------------------------------------------------------------------------
 # MODEL EVALUATION
