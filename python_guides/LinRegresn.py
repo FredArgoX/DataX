@@ -62,14 +62,6 @@ linR_model.fit(X_train, y_train)
 y_pred = linR_model.predict(X_test)
 
 # --------------------------------------------------------------------------
-# TEST ASSUMPTIONS AFTER REGRESSION
-# ---> Checking the error-related assumptions after regression, hepls to define "model validity" and "statistical inference reliability (hypothesis testing, confidence intervals)"
-
-# Independence of errors (Autocorrelation , Durbin-Watson test)
-# Homoscedasticity (Constant variance of  errors) (Include Residual plots)
-# Normality of errors (Q-Q plots, histograms of residuals, Omnibus, Jarque-Bera test)
-
-# --------------------------------------------------------------------------
 # MODEL EVALUATION
 
 # Calculate R-squared score (R²)
@@ -89,6 +81,14 @@ metrics_values = [r2, mse, rmse, mae]
 metrics_names  = ["R²", "MSE", "RMSE", "MAE"]
 for name, value in zip(metrics_names, metrics_values):
     print(f"{name:<4}: {value:>12,.10f}")
+
+# --------------------------------------------------------------------------
+# TEST ASSUMPTIONS AFTER REGRESSION
+# ---> Checking the error-related assumptions after regression, hepls to define "model validity" and "statistical inference reliability (hypothesis testing, confidence intervals)"
+
+# Independence of errors (Autocorrelation , Durbin-Watson test)
+# Homoscedasticity (Constant variance of  errors) (Include Residual plots)
+# Normality of errors (Q-Q plots, histograms of residuals, Omnibus, Jarque-Bera test)
 
 # --------------------------------------------------------------------------
 # REGRESSION VISUALIZATION
