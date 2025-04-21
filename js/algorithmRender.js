@@ -10,6 +10,14 @@ function renderAlgorithm(linkId, htmlPath, pyPath, codeId, projectId, projectUrl
             .then(response => response.ok ? response.text() : Promise.reject("Failed to load HTML"))
             .then(data => {
                 container.innerHTML = data;
+                //
+                // Trigger MathJax rendering
+                if(window.MathJax){
+                    MathJax.typesetPromise()
+                    .then(() => console.log("MathJax rendered"))
+                    .catch((err) => console.log("MathJax render failed"))
+                }
+                //
                 return fetch(pyPath);
             })
             .then(response => response.ok ? response.text() : Promise.reject("Failed to load Python"))

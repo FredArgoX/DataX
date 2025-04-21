@@ -34,8 +34,9 @@ df
 # TEST ASSUMPTIONS BEFORE REGRESSION
 # ---> Checking linearity and multicollinearity before helps to decide on "variable transformations" and "elimination of redundant predictors"
 
-# Linearity (Include Scatter Plots)
+# Linearity
 # Multicollinearity
+# (sns.heatmap(df.corr()))(Scatter Plots) (sns.pairplot(df))
 
 # --------------------------------------------------------------------------
 # DATA SPLIT (X, y) & (Train, Test)
@@ -55,14 +56,20 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # MODEL TRAINING AND PREDICTION
 
 # Model creation and  training
-linR_model = LinearRegression()
-linR_model.fit(X_train, y_train)
+model = LinearRegression()
+model.fit(X_train, y_train)
 
 # Make predictions on the test set
-y_pred = linR_model.predict(X_test)
+y_pred = model.predict(X_test)
 
 # --------------------------------------------------------------------------
 # MODEL EVALUATION
+
+# Train Score
+train_score = model.score(X_train, y_train)
+
+# Test Score
+test_score = model.score(X_test, y_test)
 
 # Calculate R-squared score (R²)
 r2 = r2_score(y_test, y_pred)
@@ -77,6 +84,8 @@ rmse = np.sqrt(mse)
 mae = mean_absolute_error(y_test, y_pred)
 
 # Print metrics
+print(f"Train Score: {train_score:>12,.10f}")
+print(f"Test Score : {test_score:>12,.10f}")
 metrics_values = [r2, mse, rmse, mae]
 metrics_names  = ["R²", "MSE", "RMSE", "MAE"]
 for name, value in zip(metrics_names, metrics_values):
@@ -97,3 +106,11 @@ for name, value in zip(metrics_names, metrics_values):
 # Feature Matrix with 1 feature: 2D visualization
 # Feature Matrix with 2 features: 3D visualization
 # Feature Matrix with 2+ features: Dimensionality Reduction > 2D or 3D plot
+
+# --------------------------------------------------------------------------
+# COEFFICIENT VISUALIZATION
+
+# features = X.columns
+# coefficients = model.coef_
+# plt.plot(features, coefficients)
+

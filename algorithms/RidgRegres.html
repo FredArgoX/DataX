@@ -1,9 +1,14 @@
-
 <h1 class="code-title">Ridge Regression</h1>
 <p class="ml-type-1">Supervised Learning</p>
 <p class="ml-type-2">Regression</p>
-<p class="code-concept">Text 1</p>
-<p class="code-concept">Text 2 <span class="blue">Text 3</span></p>
+<p class="code-concept">Ridge Regression is a <span class="blue">regularized</span> extension of linear regression designed to improve performance in scenarios with <span class="blue">multicollinearity</span>, <span class="blue">high-dimensional datasets</span> (many more features than observations), when the OLS model <span class="blue">overfits</span>, or when there's a need to <span class="blue">stabilize model coefficients</span> without eliminating any predictors (unlike Lasso). It adds a <span class="blue">penalty term</span> to the loss function that discourages the model from fitting large coefficient values, reducing the risk of <span class="blue">overfitting</span>.</p>
+<p class="code-concept">Ridge Regression modifies the ordinary least squares (OLS) objective by adding an <span class="blue">L2 penalty term</span> to the cost function: <span class="blue"></span></p>
+<p class="code-concept">$$\text{Loss} = \sum (y_i - \hat{y}_i)^2 + \lambda \sum \beta_j^2$$</p>
+<p class="code-concept">$ \sum (y_i - \hat{y}_i)^2$ represents the sum of squared residuals.</p>
+<p class="code-concept">$\lambda \sum \beta_j^2$ is the L2 penalty.</p>
+<p class="code-concept">$\lambda$ (lambda) is a hyperparameter (called alpha in scikit-learn) that controls the strength of the penalty.</p>
+<p class="code-concept">To perform a successful Ridge Regression analysis, the <span class="blue">use of numerical features must be ensured</span> (categorical feature encoding). <span class="blue">Feature scaling (standarization) is required</span>, as Ridge is sensitive to the scale of the features.</p>
+<p class="code-concept">While Ridge handles multicollinearity, the assumptions that still must hold true are <span class="blue">linearity</span>, <span class="blue">homoscedasticity</span>, <span class="blue">independence</span>, and <span class="blue">normality of residuals</span>,</p>
 <div class="just-code">
     <!--///////////////////-->
     <button class="copy-btn">

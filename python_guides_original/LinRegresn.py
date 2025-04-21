@@ -41,11 +41,11 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # MODEL TRAINING AND PREDICTION
 
 # Model training
-linR_model = LinearRegression()
-linR_model.fit(X_train, y_train)
+model = LinearRegression()
+model.fit(X_train, y_train)
 
 # Make predictions on the test set
-y_pred = linR_model.predict(X_test)
+y_pred = model.predict(X_test)
 
 # --------------------------------------------------------------------------
 # MODEL EVALUATION
@@ -63,3 +63,7 @@ r2 = r2_score(y_test, y_pred)
 # Feature Matrix with 1 feature: 2D visualization
 # Feature Matrix with 2 features: 3D visualization
 # Feature Matrix with 2+ features: Dimensionality Reduction > 2D or 3D plot
+
+# --------------------------------------------------------------------------
+# COEFFICIENT VISUALIZATION
+
