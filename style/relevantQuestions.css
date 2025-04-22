@@ -103,71 +103,66 @@ input[type="text"]:focus{
 }
 
 
-@media (min-width: 1000px) {
-    main{
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        /*margin-top: calc(60px+30px);*/
-    }
-    .container{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: var(--general-padding);
-    }
-    #column1{
-        flex: 1;
-        /*position: sticky;
-        overflow-y: auto;*/
-    }
-    #column2{
-        flex: 2;
-        margin-top: 0;
-    }
-    #questionContainer{
-        max-height: 71vh;
-        overflow-y: auto;
-        scrollbar-width: thin;
-        scrollbar-color: var(--color-5) var(--color-1); 
-    }
-    /* For WebKit-based browsers (Chrome, Safari, Edge) */
-    #questionContainer::-webkit-scrollbar {
-        width: 6px; /* Width of the vertical scrollbar */
-        height: 6px; /* Height of the horizontal scrollbar */
-    }
-    
-    #questionContainer::-webkit-scrollbar-track {
-        background: var(--color-1); /* Background of the scrollbar track */
-        border-radius: 3px; /* Rounded corners for the track */
-    }
-    
-    #questionContainer::-webkit-scrollbar-thumb {
-        background: var(--color-5); /* Color of the scrollbar thumb */
-        border-radius: 3px; /* Rounded corners for the thumb */
-    }
-    
-    #questionContainer::-webkit-scrollbar-thumb:hover {
-        background: var(--color-e); /* Color of the thumb on hover */
-    }
+
+
+
+
+
+
+
+
+
+
+.container {
+    position: relative;
+    max-width: 100%;
 }
 
+.question {
+    position: relative;
+    max-width: 100%;
+    width: 100%; /* Explicitly set width to ensure it doesn't stretch */
+    box-sizing: border-box; /* Ensure padding/borders are included in width */
+}
 
-@media (min-width: 1200px) {
-    #column1{
-        flex: 2;
-    }
-    #column2{
-        flex: 5;
-    }
+.question pre {
+    /*border: 1px solid crimson;*/
+    max-width: 100%;
+    overflow-x: auto; /* Horizontal scroll for the code block */
+    white-space: pre; /* Preserve whitespace */
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Ensure the parent column doesn't stretch */
+#column2 {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.selected{
+    text-align: start !important;
 }
 
 
 
 
 
-/*
-*{
-    border: 1px solid crimson;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
