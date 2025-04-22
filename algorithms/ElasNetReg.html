@@ -1,9 +1,20 @@
+<h1 class="code-title">Elastic Net Regression</h1>  
+<p class="ml-type-1">Supervised Learning</p>  
+<p class="ml-type-2">Regression</p>  
+<p class="code-concept">Elastic Net is a <span class="blue">regularized</span> regression technique that linearly combines the <span class="blue">L1 penalty of Lasso</span> and the <span class="blue">L2 penalty of Ridge</span>. It is especially useful when working with <span class="blue">high-dimensional datasets</span> that contain <span class="blue">correlated predictors</span> and the need for both <span class="blue">feature selection</span> and <span class="blue">coefficient shrinkage</span>.</p>  
+<p class="code-concept">Elastic Net mitigates the limitations of Lasso (which can eliminate important variables in correlated groups) and Ridge (which cannot zero out irrelevant coefficients). By blending both penalties, Elastic Net can select groups of correlated features and also produce a <span class="blue">sparse and stable model</span>.</p>  
+<p class="code-concept">Elastic Net modifies the ordinary least squares (OLS) loss function by adding both <span class="blue">L1</span> and <span class="blue">L2 penalty terms</span>:</p>  
+<p class="code-concept">$$\text{Loss} = \sum (y_i - \hat{y}_i)^2 + \lambda \left[ \alpha \sum |\beta_j| + (1 - \alpha) \sum \beta_j^2 \right]$$</p>  
+<p class="code-concept">$ \sum (y_i - \hat{y}_i)^2$ is the sum of squared residuals.</p>  
+<p class="code-concept">The term inside the brackets is a mix of the <span class="blue">L1 norm</span> (Lasso) and the <span class="blue">L2 norm</span> (Ridge).</p>  
+<p class="code-concept">$\lambda$ (lambda) is the overall regularization strength (alpha in scikit-learn).</p>
+<p class="code-concept">$\alpha$ (alpha) controls the mix between L1 and L2 (l1_ratio in scikit-learn). When:</p> 
+<p class="code-concept">$\alpha$ = 1 ---> Lasso</p> 
+<p class="code-concept">$\alpha$ = 0 ---> Ridge</p> 
+<p class="code-concept">0 &lt $\alpha$ &lt; 1 ---> Elastic Net</p>
+<p class="code-concept">To apply Elastic Net, <span class="blue">numerical features must be ensured</span> (proper encoding of categorical variables is required), and <span class="blue">feature scaling (standardization) is required</span>, as the method is sensitive to feature magnitude.</p>  
+<p class="code-concept">Elastic Net is less sensitive to <span class="blue">multicollinearity</span> and <span class="blue">overfitting</span> compared to OLS due to its regularization. However, it does not relax the core assumptions (<span class="blue">linearity</span>, <span class="blue">homoscedasticity</span>, <span class="blue">independence</span>, and <span class="blue">normality of residuals for inference</span>.</p>
 
-<h1 class="code-title">Elastic Net Regression</h1>
-<p class="ml-type-1">Supervised Learning</p>
-<p class="ml-type-2">Regression</p>
-<p class="code-concept">Text 1</p>
-<p class="code-concept">Text 2 <span class="blue">Text 3</span></p>
 <div class="just-code">
     <!--///////////////////-->
     <button class="copy-btn">
