@@ -1,9 +1,15 @@
-
 <h1 class="code-title">Lasso Regression</h1>
 <p class="ml-type-1">Supervised Learning</p>
 <p class="ml-type-2">Regression</p>
-<p class="code-concept">Text 1</p>
-<p class="code-concept">Text 2 <span class="blue">Text 3</span></p>
+<p class="code-concept">Lasso Regression (Least Absolute Shrinkage and Selection Operator) is a <span class="blue">regularized</span> version of linear regression that improves performance in cases of <span class="blue">high-dimensional datasets</span> and <span class="blue">overfitting</span>. When dealing with <span class="blue">multicollinearity</span>, Lasso might arbitrarily select one variable and discard others, which can be unstable and might not reflect the true underlying relationships.  Unlike Ridge Regression, Lasso has the unique ability to <span class="blue">perform feature selection</span> by driving some coefficients exactly to zero, effectively eliminating irrelevant predictors and yielding a <span class="blue">sparse model</span>.</p>
+<p class="code-concept">Lasso modifies the ordinary least squares (OLS) objective function by adding an <span class="blue">L1 penalty term</span> to the loss function:</p>
+<p class="code-concept">$$\text{Loss} = \sum (y_i - \hat{y}_i)^2 + \lambda \sum |\beta_j|$$</p>
+<p class="code-concept">$ \sum (y_i - \hat{y}_i)^2$ is the sum of squared residuals.</p>
+<p class="code-concept">$\lambda \sum |\beta_j|$ is the L1 penalty, which promotes sparsity in the model.</p>
+<p class="code-concept">$\lambda$ (lambda), also known as alpha in scikit-learn, is a hyperparameter that determines the strength of regularization. Higher values of $\lambda$ lead to more aggressive shrinkage of coefficients.</p>
+<p class="code-concept">Lasso is especially useful when there are many features and some are likely irrelevant. It can <span class="blue">improve interpretability</span> by selecting only the most predictive features.</p>
+<p class="code-concept">For optimal performance, features must be <span class="blue">numerical</span> (ensure proper encoding of categorical variables), and <span class="blue">feature scaling (standardization)</span> is necessary since Lasso is sensitive to feature magnitude.</p>
+<p class="code-concept">Lasso still assumes the typical linear regression assumptions: <span class="blue">linearity</span>, <span class="blue">homoscedasticity</span>, <span class="blue">independence</span>, and <span class="blue">normality of residuals (for inference)</span>.</p>
 <div class="just-code">
     <!--///////////////////-->
     <button class="copy-btn">

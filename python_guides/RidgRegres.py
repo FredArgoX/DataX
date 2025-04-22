@@ -71,7 +71,7 @@ y_pred = model.predict(X_test)
 # MODEL TRAINING AND PREDICTION (Cross-Validation)
 
 # Model creation and  training
-model_cv = RidgeCV(alphas=np.logspace(-6,6,1000))
+model_cv = RidgeCV(alphas=np.logspace(-6,6,100), cv=5, max_iter=10000)
 model_cv.fit(X_train, y_train)
 
 # Make predictions on the test set
@@ -126,7 +126,7 @@ for name, value in zip(metrics_names_cv, metrics_values_cv):
 
 # Independence of errors (Autocorrelation , Durbin-Watson test)
 # Homoscedasticity (Constant variance of  errors) (Include Residual plots)
-# Normality of errors (Q-Q plots, histograms of residuals, Omnibus, Jarque-Bera test)
+# Normality of errors (Q-Q plots, histograms of residuals, Omnibus, Jarque-Bera test) (for inference)
 
 # --------------------------------------------------------------------------
 # REGRESSION VISUALIZATION
