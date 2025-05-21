@@ -101,6 +101,13 @@ input[type="text"]:focus{
     color: var(--color-f);
     width: 100%;
     text-align: justify;
+    /**/
+    /**/
+    /**/
+    /*white-space: normal;*/
+    /**/
+    /**/
+    /**/
 }
 
 
